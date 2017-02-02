@@ -1,0 +1,7 @@
+set (CMAKE_CXX_STANDARD 11)
+project(panoVideoStitch)  
+find_package(OpenCV REQUIRED)
+INCLUDE_DIRECTORIES( ${OPENCV_INCLUDE_DIR} )  
+add_executable(panoVideoStitch main.cpp bundle.cpp FileStorageExt.cpp frameStitch.cpp keypoint_filter.cpp precomp.cpp template_match.cpp)  
+target_link_libraries(test ${OpenCV_LIBS})
+cmake_minimum_required(VERSION 2.8)
